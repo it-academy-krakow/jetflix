@@ -1,0 +1,27 @@
+.movie-details {
+    width: 1200px;
+    margin: 100px auto 0;
+    height: 500px;
+    display: grid;
+    grid-template-columns: 20% 30% 50%;
+    grid-template-rows: 10% 45% 45%;
+    color: white;
+
+    .episodes {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 4;
+        background-color: aqua;
+    }
+
+    .global-title {
+        grid-column-start: 2;
+        grid-column-end: 4;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        background-color: pink;
+        font-size: 1.6rem;
+    }
+
+}

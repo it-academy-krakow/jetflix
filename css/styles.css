@@ -20,6 +20,7 @@ header .header-bg {
   background-repeat: no-repeat;
   background-size: cover;
   opacity: 0.6;
+  overflow: hidden;
 }
 
 header .header-gradient {
@@ -111,6 +112,10 @@ header .header-gradient {
   .logo img {
     background-color: cyan;
   }
+}
+
+.header-video {
+  width: 100%;
 }
 
 .movies-section {

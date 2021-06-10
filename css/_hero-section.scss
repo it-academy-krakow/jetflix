@@ -1,0 +1,70 @@
+
+.hero {
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    color: white;
+    width: 80%;
+}
+
+.hero-info {
+    display: flex;
+
+    div {
+        margin-right: 15px;
+    }
+
+    .hero-rating {
+        img {
+            width: 16px;
+        }
+
+        span {
+            font-weight: bold;
+        }
+    }
+
+    .hero-details {
+        .value {
+            color: red;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+    }
+}
+
+.hero-controls {
+    display: flex;
+
+    .btn {
+        background-color: black;
+        border: none;
+        border-radius: 30px;
+        width: 150px;
+        height: 45px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 20px;
+
+
+        img {
+            width: 16px;
+            margin-right: 10px;
+        }
+
+        span {
+            color: white;
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: 0.9rem;
+            letter-spacing: 2px;
+        }
+
+        &.watch-btn {
+            background-color: red;
+            box-shadow: 0 5px 20px 5px rgba(red, 0.5);
+        }
+    }
+}

@@ -57,7 +57,7 @@ header {
 }
 
 .logo {
-    flex-basis: 50%;
+    flex-basis: 30%;
 
     a {
         width: 120px;
@@ -87,6 +87,10 @@ header {
     }
 }
 
+.controls {
+    display: flex;
+}
+
 .controls button {
     width: 32px;
     height: 32px;
@@ -97,6 +101,23 @@ header {
 
     &:last-child {
         margin-right: 0;
+    }
+}
+
+button.primary-button {
+    width: 120px;
+    height: 40px;
+    background-color: red;
+    color: white;
+    box-shadow: 0 5px 10px rgba(255, 0, 0, 0.5);
+    border-radius: 20px;
+    border-width: 0;
+    cursor: pointer;
+    transition: all 100ms ease;
+
+    &:hover {
+        background-color: rgb(177, 0, 0);
+        box-shadow: 0 5px 10px rgba(177, 0, 0, 0.5);
     }
 }
 
@@ -121,3 +142,4 @@ header {
 @import './hero-section';
 @import './movies';
 @import './single-movie';
+@import './modal';

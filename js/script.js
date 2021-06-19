@@ -1,3 +1,7 @@
+const modalContainer = document.getElementById('register-modal');
+const signUpButton = document.getElementById('sign-up');
+const closeButton = document.getElementById('close-modal');
+
 const movies = [
     {
         title: 'Movie 1',
@@ -16,24 +20,15 @@ const movies = [
     },
 ];
 
-// for (let i = 0; i < 3; i++) {
-//     const movieTitle = movies
-//     console.log()
-// }
-
-const numbers = [8, 5, 3, 9, 10, 22];
-numbers.push(100);
-
-const newNumbers = [];
-for (let i = 0; i < numbers.length; i++) {
-    if (numbers[i] >= 9) {
-        newNumbers.push(numbers[i]);
-    }
-}
-
 const filterFunction = function (value) {
     return value >= 9;
 };
-const newNumbersFilter = numbers.filter(filterFunction);
 
-console.log(newNumbersFilter);
+signUpButton.addEventListener('click', function () {
+    console.log('awdawd');
+    modalContainer.classList.add('visible');
+});
+
+closeButton.addEventListener('click', function () {
+    modalContainer.classList.remove('visible');
+});

@@ -1,28 +1,7 @@
 const modalContainer = document.getElementById('register-modal');
 const signUpButton = document.getElementById('sign-up');
 const closeButton = document.getElementById('close-modal');
-
-const movies = [
-    {
-        title: 'Movie 1',
-        poster: 'link to image 1',
-        year: 2020,
-    },
-    {
-        title: 'Movie 2',
-        poster: 'link to image 2',
-        year: 1999,
-    },
-    {
-        title: 'Movie 3',
-        poster: 'link to image 3',
-        year: 2009,
-    },
-];
-
-const filterFunction = function (value) {
-    return value >= 9;
-};
+const moviesSection = document.querySelector('.movies-section');
 
 signUpButton.addEventListener('click', function () {
     console.log('awdawd');
@@ -32,3 +11,30 @@ signUpButton.addEventListener('click', function () {
 closeButton.addEventListener('click', function () {
     modalContainer.classList.remove('visible');
 });
+
+const createMovieElement = (movieData) => {
+    const movieContainer = document.createElement('a');
+    movieContainer.classList.add('movie');
+
+    const moviePoster = document.createElement('img');
+    moviePoster.src = movieData.poster_path;
+
+    const movieTitle = document.createElement('span');
+    movieTitle.textContent = movieData.title;
+
+    movieContainer.appendChild(moviePoster);
+    movieContainer.appendChild(movieTitle);
+
+    return movieContainer;
+};
+
+const renderMovies = () => {
+    const movies = mockedMovies.results;
+
+    movies.forEach((movie) => {
+        const movieElement = createMovieElement(movie);
+        moviesSection.appendChild(movieElement);
+    });
+};
+
+renderMovies();

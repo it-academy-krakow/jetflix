@@ -1,4 +1,3 @@
-
 .hero {
     position: absolute;
     top: 50%;
@@ -6,6 +5,10 @@
     left: 50%;
     color: white;
     width: 80%;
+
+    &.hidden {
+        display: none;
+    }
 }
 
 .hero-info {
